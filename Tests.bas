@@ -34,6 +34,7 @@ Dim bb As Workbook, bs As Worksheet, br As Long
 Dim nameRng As Name
 Dim FSO As Object
 
+'Tom Macdonald 09/03/2017
 Const sSortOrder As String = "Exit,New,Delta"
 
 
@@ -44,9 +45,9 @@ Set ws = wb.Sheets("Manual")
 lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
 
 If Application.WorksheetFunction.CountIf(ws.Range("H2:H" & lr), 0) = lr - 1 Then
-MsgBox "No updates"
+MsgBox "There has not been any updates"
 Else
-MsgBox "Updates"
+MsgBox "There were Updates, x-Act script will now run"
 End If
 
 
